@@ -1,0 +1,354 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 1;
+  scroll-behavior: smooth;
+  padding-block-start: 20px;
+  z-index: 1;
+}
+
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 95vw;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideDown 0.3s ease;
+
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #000;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+  color: #333;
+  overflow-y: auto;
+}
+
+.modalBody .packageTitle {
+
+  margin-block-end: 1.5rem;
+  font-size: 2rem;
+  color: #83cb2b;
+
+}
+
+.modalCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+}
+
+.modalItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: space-between; */
+  justify-content: space-between;
+  height: auto;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.32);
+  border: 1px solid rgba(0, 0, 0, 0.153);
+  border-radius: 10px;
+  padding: 20px;
+  margin-block-end: .8rem;
+  background: #d9eaf3;
+
+}
+
+.modalItem h4 {
+
+  color: #387ab2;
+  font-size: 1.3rem;
+  font-weight: 800;
+
+}
+
+.modalItem .price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-inline-end: .2rem;
+}
+
+
+.modalItem .priceExtra {
+  font-size: .95rem;
+  font-weight: 800;
+}
+
+.modalItem .movements {
+  font-size: .85rem;
+  color: #333;
+}
+
+.buttonContainer {
+  margin-block-start: 10px;
+}
+
+.buttonContainer button {
+  padding-inline: 30px;
+  padding-block: 10px;
+  /* width: 45%; */
+  border-radius: 20px;
+  border: none;
+  background: #387ab2;
+}
+
+/* Tablet */
+@media screen and (min-width:768px) and (max-width:1023px) {}
+
+
+/* Laptop */
+
+@media screen and (min-width:1024px) and (max-width:1439px) {
+
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    scroll-behavior: smooth;
+
+  }
+
+
+  .modalContent {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    width: 95vw;
+    height: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.3s ease;
+
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+  }
+
+  .closeButton:hover {
+    color: #000;
+  }
+
+  .modalBody {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+    overflow-y: auto;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .modalBody .packageTitle {
+
+    margin-block-end: 1.5rem;
+    font-size: 2rem;
+    color: #83cb2b;
+
+  }
+
+  .modalCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    max-height: 350px;
+  }
+
+  .modalItem {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    box-shadow: 2px 2px 6px #00000052;
+    border: 1px solid #00000027;
+    border-radius: 10px;
+    padding: 30px;
+    margin-block-end: .8rem;
+    max-height: 251px;
+    background: #d9eaf3;
+  }
+
+
+  .modalItem h4 {
+
+    color: #387ab2;
+    font-size: 1.3rem;
+    font-weight: 800;
+
+  }
+
+  .modalItem .price {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-inline-end: .2rem;
+  }
+
+
+  .modalItem .priceExtra {
+    font-size: .95rem;
+    font-weight: 800;
+  }
+
+  .modalItem .movements {
+    font-size: .85rem;
+    color: #333;
+  }
+
+  .buttonContainer {
+    margin-block-start: 20px;
+  }
+
+  .buttonContainer button {
+    padding-inline: 30px;
+    padding-block: 10px;
+    border-radius: 20px;
+    border: none;
+    background: #387ab2;
+  }
+
+
+}
+
+
+/* Desktop */
+@media screen and (min-width:1440px) {
+
+  .modalContent {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.3s ease;
+
+  }
+
+  .modalBody {
+    flex-direction: column;
+    width: 100%;
+    width: 100%;
+    max-height: 320px;
+    overflow-y: auto;
+    font-size: 1rem;
+    color: #333;
+  }
+
+
+  .modalCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    max-height: 300px;
+  }
+
+
+  .modalItem {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    box-shadow: 2px 2px 6px #00000052;
+    border: 1px solid #00000027;
+    border-radius: 10px;
+    padding: 30px;
+    margin-block-end: .8rem;
+    max-height: 250px;
+    background: #d9eaf3;
+  }
+
+
+  .buttonContainer {
+    margin-block-start: 20px;
+  }
+
+
+}
